@@ -12,6 +12,10 @@ matrix:
    - os: linux
      dist: bionic
      services: docker
+   - os: linux
+     dist: bionic
+     services: docker
+     arch: ppc64le
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then docker pull vathpela/efi-ci-rawhide:v0 ; fi
